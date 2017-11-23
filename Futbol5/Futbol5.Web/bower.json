@@ -1,0 +1,16 @@
+{
+  "name": "Futbol5",
+  "version": "1.0",
+  "dependencies": {
+    "bootstrap": "4.0.0-beta",
+    "jquery": "2.1.1",
+    "tether": "latest",
+    "angular": "1.4.1",
+    "angular-ui-router": "latest",
+    "angular-loading-bar": "latest",
+    "fontawesome": "latest",
+    "angular-resource": "1.4.1",
+    "angularjs-datepicker": "^2.1.23"
+  },
+  "private": true
+}

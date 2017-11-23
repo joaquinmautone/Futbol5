@@ -1,0 +1,65 @@
+﻿<div class="animated fadeIn">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-header">
+                    <i class="fa fa-edit"></i>Campeonato
+                    <div class="card-actions"></div>
+                </div>
+                <div class="card-block">
+                    <form name="vm.form" class="form-2orizontal">
+                        <div class="form-group">
+                            <label class="form-control-label" for="nombre">Nombre</label>
+                            <input id="nombre" class="form-control" size="16" type="text" ng-model="vm.campeonatoSeleccionado.Nombre">
+                        </div>
+                        <div class="form-group">
+                            <div class="col-lg-4">
+                                <label class="form-control-label" for="fechaDesde">Fecha Desde</label>
+                                <input id="fechaDesde" class="form-control" size="16" type="text" ng-model="vm.campeonatoSeleccionado.FechaDesde">
+                                <!--<datepicker>
+                                    <input ng-model="vm.campeonatoSeleccionado.FechaDesde" date-format="dd/MM/yyyy" type="text" placeholder="Fecha Desde" />
+                                </datepicker>-->
+                            </div>
+                            <div class="col-lg-4">
+                                <label class="form-control-label" for="fechaHasta">Fecha Hasta</label>
+                                <input id="fechaHasta" class="form-control" size="16" type="text" ng-model="vm.campeonatoSeleccionado.FechaHasta">
+                                <!--<datepicker>
+                                    <input ng-model="vm.campeonatoSeleccionado.FechaHasta" date-format="dd/MM/yyyy" type="text" placeholder="Fecha Desde" />
+                                </datepicker>-->
+                            </div>
+                        </div>
+                        <div class="form-group" ng-show="vm.campeonatoSeleccionado.CampeonatoId && vm.campeonatoSeleccionado.Equipos.length < 4">
+                            <a href="#" ui-sref="equipo({ idCampeonato: vm.campeonatoSeleccionado.CampeonatoId })"><i class="fa fa-plus"></i>Agregar Equipo</a>
+                        </div>
+                        <div id="equipos-container" ng-show="vm.campeonatoSeleccionado.Equipos && vm.campeonatoSeleccionado.Equipos.length > 0">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Equipos</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="equipo in vm.campeonatoSeleccionado.Equipos">
+                                        <td class="text-left">
+                                            <label>{{equipo.Nombre}}</label>
+                                        </td>
+                                        <td class="text-right">
+                                            <a href="#" ui-sref="equipo({ idCampeonato: vm.campeonatoSeleccionado.CampeonatoId, id: equipo.EquipoId })"><i class="fa fa-edit"></i>Editar</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="form-actions">
+                            <button class="btn btn-primary" ng-click="vm.crearCampeonato()" ng-show="!vm.campeonatoSeleccionado.CampeonatoId">Agregar</button>
+                            <button class="btn btn-primary" ng-click="vm.modificarCampeonato()" ng-show="vm.campeonatoSeleccionado.CampeonatoId">Modificar</button>
+                            <button class="btn btn-default" type="button" ng-click="vm.limpiarCampos()">Cancelar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

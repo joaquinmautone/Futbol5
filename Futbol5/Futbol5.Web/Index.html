@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="es" ng-app="app">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Futbol5 - Demo APP">
+    <meta name="author" content="Joaquin Mautone">
+
+    <title>Futbol5</title>
+
+    <!-- Main styles for this application -->
+    <link href="Content/css/style.css" rel="stylesheet">
+    <link href="Content/css/font-awesome.min.css" rel="stylesheet" />
+    <!--<link href="bower_components/angularjs-datepicker/src/css/angular-datepicker.css" rel="stylesheet" type="text/css" />-->
+
+</head>
+
+<body class="app header-fixed aside-menu-fixed aside-menu-hidden">
+
+    <!-- User Interface -->
+    <ui-view></ui-view>
+
+    <!-- Bootstrap and necessary plugins -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/tether/dist/js/tether.min.js"></script>
+    <script src="bower_components/popper.js/dist/umd/popper.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- AngularJS -->
+    <script src="bower_components/angular/angular.min.js"></script>
+
+    <!-- AngularJS plugins -->
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+    <script src="bower_components/angular-loading-bar/build/loading-bar.min.js"></script>
+    <!--<script src="bower_components/angularjs-datepicker/src/js/angular-datepicker.js"></script>-->
+
+    <!-- AngularJS Futbol5 App scripts -->
+    <script src="Scripts/app/app.js"></script>
+    <script src="Scripts/app/config.js"></script>
+    <script src="Scripts/app/services/shared/servicehelper.js"></script>    
+    <script src="Scripts/app/services/campeonato.service.js"></script>    
+    <script src="Scripts/app/services/equipo.service.js"></script>
+    <script src="Scripts/app/services/jugador.service.js"></script>
+    <script src="Scripts/app/controllers/dashboard.controller.js"></script>    
+    <script src="Scripts/app/controllers/campeonato.controller.js"></script>    
+    <script src="Scripts/app/controllers/equipo.controller.js"></script>    
+    <script src="Scripts/app/controllers/jugador.controller.js"></script>
+
+</body>
+
+</html>
